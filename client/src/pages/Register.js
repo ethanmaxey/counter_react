@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // import logo from './logo.svg';
 // import './App.css';
 
 function Register() {
+  const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
@@ -21,7 +23,10 @@ function Register() {
     })
 
     const data = await response.json()
-    console.log(data)
+    
+    if (data.status === 'ok' ) {
+      navigate('/login')
+    }
   }
 
   return (

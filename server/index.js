@@ -5,8 +5,6 @@ const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
 const User = require('./models/user.model')
-
-
 const jwt = require('jsonwebtoken')
 
 app.use(cors())
@@ -45,9 +43,6 @@ app.post('/api/login', async (req, res) => {
     } else {
         return res.json({ status: 'error', user: false})
     }
-
-    res.json({ status: 'ok' })
-
 })
 
 app.listen(1337, () => {
