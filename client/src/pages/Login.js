@@ -21,6 +21,14 @@ function Login() {
     })
 
     const data = await response.json()
+
+    if (data.user) {
+      alert('Login success')
+      window.location.href = '/dashboard'
+    } else {
+      alert('Please check your username and password')
+    }
+
     console.log(data)
   }
 
@@ -41,7 +49,7 @@ function Login() {
             type="text" 
             placeholder="Password" />
           <br></br>
-          <input type="submit" value="Register"/>
+          <input type="submit" value="Login"/>
         </form>
     </div>
   );
