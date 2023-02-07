@@ -22,7 +22,3 @@ This app allows you to create a personalized list of all the National Parks you 
 ## Contributing
 
 Contributions are welcome! Please feel free to fork the repository and make changes. When you're ready, submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
